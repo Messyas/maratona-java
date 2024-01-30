@@ -1,7 +1,7 @@
-package academy.devdojo.maratonajava.Metodos.test;
+package academy.devdojo.maratonajava.Javacore.intrudocao.test;
 
-import academy.devdojo.maratonajava.Metodos.model.Estudante;
-import academy.devdojo.maratonajava.Metodos.model.ImpressoraEstudante;
+import academy.devdojo.maratonajava.Javacore.intrudocao.model.Estudante;
+import academy.devdojo.maratonajava.Javacore.intrudocao.model.ImpressoraEstudante;
 
 public class EstudanteTest {
     public static void main(String[] args) {

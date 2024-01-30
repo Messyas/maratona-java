@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.Metodos.test;
+package academy.devdojo.maratonajava.Javacore.intrudocao.test;
 
-import academy.devdojo.maratonajava.Metodos.model.Funcionario;
+import academy.devdojo.maratonajava.Javacore.intrudocao.model.Funcionario;
 
 public class FuncionarioTest {
     public static void main(String[] args) {

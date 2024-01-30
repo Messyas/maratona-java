@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.oop.test;
+package academy.devdojo.maratonajava.Javacore.oop.test;
 
-import academy.devdojo.maratonajava.oop.model.Calculadora;
+import academy.devdojo.maratonajava.Javacore.oop.model.Calculadora;
 
 public class CalculadoraTest {
     public static void main(String[] args) {

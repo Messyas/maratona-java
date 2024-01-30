@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.oop.test;
+package academy.devdojo.maratonajava.Javacore.oop.test;
 
-import academy.devdojo.maratonajava.oop.model.Professor;
+import academy.devdojo.maratonajava.Javacore.oop.model.Professor;
 
 public class ProfessorTest {
     public static void main(String[] args) {

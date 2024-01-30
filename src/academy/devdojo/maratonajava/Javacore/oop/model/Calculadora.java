@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.oop.model;
+package academy.devdojo.maratonajava.Javacore.oop.model;
 
 public class Calculadora {
 

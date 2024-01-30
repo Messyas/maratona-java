@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.Metodos.model;
+package academy.devdojo.maratonajava.Javacore.intrudocao.model;
 
 public class Funcionario {
     private String nome = null;

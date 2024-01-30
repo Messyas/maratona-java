@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.Metodos.test;
+package academy.devdojo.maratonajava.Javacore.intrudocao.test;
 
-import academy.devdojo.maratonajava.Metodos.model.Calculadora;
+import academy.devdojo.maratonajava.Javacore.intrudocao.model.Calculadora;
 
 public class CalculadoraTest05 {
     public static void main(String... args) {

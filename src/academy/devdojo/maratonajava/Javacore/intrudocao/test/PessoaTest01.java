@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.Metodos.test;
+package academy.devdojo.maratonajava.Javacore.intrudocao.test;
 
-import academy.devdojo.maratonajava.Metodos.model.Pessoa;
+import academy.devdojo.maratonajava.Javacore.intrudocao.model.Pessoa;
 
 /**
  * acoplamento, se refere ao quanto uma classe depende de outra.

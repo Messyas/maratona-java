@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.oop.test;
+package academy.devdojo.maratonajava.Javacore.oop.test;
 
-import academy.devdojo.maratonajava.oop.model.Calculadora;
+import academy.devdojo.maratonajava.Javacore.oop.model.Calculadora;
 
 /**
  * Em java, quando se passa um argumento com um tipo primitivo, nao se passa uma referencia, e sim é feita uma copia dos valores para o metodo
