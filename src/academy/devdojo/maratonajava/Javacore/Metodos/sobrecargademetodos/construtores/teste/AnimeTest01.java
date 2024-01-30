@@ -9,9 +9,9 @@ import academy.devdojo.maratonajava.Javacore.Metodos.sobrecargademetodos.constru
 public class AnimeTest01 {
     public static void main(String[] args) {
         Anime anime = new Anime("Kaiki no kousin", "nao sei", 12, "amizade");
-        Anime anime2 = new Anime();
+
 
         anime.imprimir();
-        anime2.imprimir();
+
     }
 }

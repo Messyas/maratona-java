@@ -8,16 +8,28 @@ public class Anime {
     private String tipo;
     private int episodios;
     private String genero;
+    private String estudio;
 
     //construtor
     public Anime(String nome, String tipo, int episodios,String genero){
+        this();// primeiro a ser executado
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
         this.genero = genero;
     }
-    //sobrecarga de construtores
+
+    public Anime(String nome, String tipo, int episodios,String genero, String estudio){
+        this(nome, tipo, episodios, genero);//pega os dados ja criados do respectivo objeto
+        this.nome = nome;
+        this.tipo = tipo;
+        this.episodios = episodios;
+        this.genero = genero;
+        this.estudio = estudio;
+    }
+    //scorecard de construtores
     public Anime() {
+        System.out.println("Dentro do construtor sem argumentos");
 
     }
 
