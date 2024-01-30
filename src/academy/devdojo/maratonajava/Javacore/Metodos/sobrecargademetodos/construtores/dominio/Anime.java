@@ -1,5 +1,8 @@
-package academy.devdojo.maratonajava.Javacore.Metodos.sobrecargademetodos.dominio;
+package academy.devdojo.maratonajava.Javacore.Metodos.sobrecargademetodos.construtores.dominio;
 
+/**
+ * construtores
+ */
 public class Anime {
     private String nome;
     private String tipo;
@@ -7,19 +10,15 @@ public class Anime {
     private String genero;
 
     //construtor
-    public Anime(){
-
-    }
-
-    public void init(String nome, String tipo, int episodios){
+    public Anime(String nome, String tipo, int episodios,String genero){
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
-    }
-
-    public void init (String nome, String tipo, int episodios,String genero){
-        this.init(nome, tipo, episodios);//pega os nomes ja adicionadaos
         this.genero = genero;
+    }
+    //sobrecarga de construtores
+    public Anime() {
+
     }
 
     public void imprimir() {
