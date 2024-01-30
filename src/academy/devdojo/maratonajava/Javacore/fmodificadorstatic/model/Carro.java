@@ -25,6 +25,14 @@ public class Carro {
         //System.out.println("Velocidade Limite " + this.velocidadeLimite); por isso nao se pode utilizar this nesse caso, ja que ele se refere a instancia de cada atribuito
     }
 
+    public static void setVelocidadeLimite(double velocidadeLimite) {
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+
+    public static double getVelocidadeLimite() {
+        return velocidadeLimite;
+    }
+
     public String getNome() {
         return nome;
     }
