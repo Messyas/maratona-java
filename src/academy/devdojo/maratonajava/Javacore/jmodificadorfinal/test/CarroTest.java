@@ -4,6 +4,9 @@ import academy.devdojo.maratonajava.Javacore.jmodificadorfinal.dominio.Carro;
 import academy.devdojo.maratonajava.Javacore.jmodificadorfinal.dominio.Comprador;
 import academy.devdojo.maratonajava.Javacore.jmodificadorfinal.dominio.Ferrari;
 
+/**
+ * nao faz sentido colocar o modificador final em metodos de uma classe que ja é final, ja que uma classe final nao permite sobrescrita
+ */
 public class CarroTest {
     public static void main(String[] args) {
         Carro carro = new Carro();
