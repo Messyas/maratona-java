@@ -29,4 +29,11 @@ public class Carro {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    //metodo com final
+
+    public final void imprime() {
+        System.out.println(this.nome);
+        System.out.println("Nao se pode sobrescrever este metodo");
+    }
 }
