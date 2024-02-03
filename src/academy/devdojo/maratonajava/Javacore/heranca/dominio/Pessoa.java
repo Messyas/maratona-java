@@ -1,9 +1,12 @@
 package academy.devdojo.maratonajava.Javacore.heranca.dominio;
 
+/**
+ * Protected: faz com que os atributos de uma superclasse possam ser acessados diretamete por todas as subclasses. Devem estar no mesmo pacote
+ */
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
 
     public void imprime() {
         System.out.println(this.nome);
