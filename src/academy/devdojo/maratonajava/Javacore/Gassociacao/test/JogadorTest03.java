@@ -3,6 +3,9 @@ package academy.devdojo.maratonajava.Javacore.Gassociacao.test;
 import academy.devdojo.maratonajava.Javacore.Gassociacao.dominio.Jogador;
 import academy.devdojo.maratonajava.Javacore.Gassociacao.dominio.Time;
 
+/**
+ * fazer o exercicio da aula 70 sobre associacao.
+ */
 public class JogadorTest03 {
     public static void main(String[] args) {
         Jogador jogador = new Jogador("Cafu");
