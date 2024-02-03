@@ -7,6 +7,10 @@ package academy.devdojo.maratonajava.Javacore.heranca.dominio;
 public class Funcionario extends Pessoa {
     private double salario;
 
+    public Funcionario(String nome) {
+        super(nome);
+    }
+
     public void imprime() {
         super.imprime();
         //imprima o metodo da classe pai e depois imprima a seguir
