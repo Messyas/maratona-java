@@ -1,50 +1,27 @@
 package academy.devdojo.maratonajava.Javacore.enumeracies.dominio;
 
 public class Cliente {
+    public enum TipoPagamento {//classe enum dentro de outra classe
+        DEBITO, CREDITO
+    }
     private String nome;
-    //essa associacao entre a classe enum e a classe desejada permite que as enumeracoes sejam acessadas
-    private TipoCliente tipoCliente;
+    private TipoCliente tipoCliente; //essa associacao entre a classe enum e a classe desejada permite que as enumeracoes sejam acessadas
+    private TipoPagamento tipoPagamento;
 
-    public Cliente(String nome, TipoCliente tipoCliente) {
+    public Cliente(String nome, TipoCliente tipoCliente, TipoPagamento tipoPagamento) {
         this.nome = nome;
         this.tipoCliente = tipoCliente;
+        this.tipoPagamento = tipoPagamento;
     }
 
     @Override
     public String toString() {
         return "Cliente{" +
                 "nome='" + nome + '\'' +
-                ", tipoCliente=" + tipoCliente +
+                ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
+                ", tipoClienteInt=" + tipoCliente.VALOR +
+                ", tipoPagamento=" + tipoPagamento +
                 '}';
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public TipoCliente getTipoCliente() {
-        return tipoCliente;
-    }
-
-    public void setTipoCliente(TipoCliente tipoCliente) {
-        this.tipoCliente = tipoCliente;
-    }
 }
-//  private String tipo;
-    //public static final String PESSOA_FISICA = "PESSOA_FISICA";
-   // public static final String PESSOA_JURIDICA = "PESSOA_JURIDICA";
-
-    //public Cliente(String nome, String tipo) {
-       // if(tipo.equalsIgnoreCase(PESSOA_FISICA) == false && tipo.equalsIgnoreCase(PESSOA_JURIDICA) == false) forma menos inteligente de fazer isso x forma abilio:
-      //  if(!tipo.equals(PESSOA_FISICA) && !tipo.equals(PESSOA_JURIDICA)) {
-          //  return;// isso nao é considerado uma boa pratica, justamente para lidar com estes casos existem enumeracoes
-       // }
-      //  this.nome = nome;
-       // this.tipo = tipo;
-    //}
-
 

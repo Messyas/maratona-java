@@ -8,8 +8,8 @@ import academy.devdojo.maratonajava.Javacore.enumeracies.dominio.TipoCliente;
  */
 public class ClienteTest01 {
     public static void main(String[] args) {
-        Cliente cliente1 = new Cliente("messyas gois franca",TipoCliente.PESSOA_FISICA);
-        Cliente cliente2 = new Cliente("messyas gois franca",TipoCliente.PESSOA_JURIDICA);
+        Cliente cliente1 = new Cliente("messyas gois franca",TipoCliente.PESSOA_FISICA,Cliente.TipoPagamento.DEBITO);
+        Cliente cliente2 = new Cliente("messyas gois franca",TipoCliente.PESSOA_JURIDICA,Cliente.TipoPagamento.CREDITO);
      //   Cliente cliente3 = new Cliente("messyas gois franca", "pessoa fisic"); forma incorreta
 
         System.out.println(cliente1);
