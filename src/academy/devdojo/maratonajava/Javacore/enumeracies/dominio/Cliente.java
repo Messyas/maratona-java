@@ -4,6 +4,7 @@ public class Cliente {
     public enum TipoPagamento {//classe enum dentro de outra classe
         DEBITO, CREDITO
     }
+
     private String nome;
     private TipoCliente tipoCliente; //essa associacao entre a classe enum e a classe desejada permite que as enumeracoes sejam acessadas
     private TipoPagamento tipoPagamento;
@@ -19,7 +20,7 @@ public class Cliente {
         return "Cliente{" +
                 "nome='" + nome + '\'' +
                 ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
-                ", tipoClienteInt=" + tipoCliente.VALOR +
+                ", tipoClienteInt=" + tipoCliente.getValor() +
                 ", tipoPagamento=" + tipoPagamento +
                 '}';
     }

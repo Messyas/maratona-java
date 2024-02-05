@@ -2,6 +2,7 @@ package academy.devdojo.maratonajava.Javacore.enumeracies.test;
 
 import academy.devdojo.maratonajava.Javacore.enumeracies.dominio.Cliente;
 import academy.devdojo.maratonajava.Javacore.enumeracies.dominio.TipoCliente;
+import academy.devdojo.maratonajava.Javacore.enumeracies.dominio.TipoPagamento;
 
 /**
  * enumeracaoes: é usada quando se tem uma escolha dentro de uma quantidade limitada de opcoes, e deve-se forcar o tipo a ser utilizado
@@ -14,6 +15,11 @@ public class ClienteTest01 {
 
         System.out.println(cliente1);
         System.out.println(cliente2);
-     //   System.out.println(cliente3);
+        System.out.println(TipoPagamento.DEBITO.calcularDesconto(200));
+        System.out.println(TipoPagamento.CREDITO.calcularDesconto(200));
+
+        TipoCliente tipoCliente2 = TipoCliente.tipoClientePorNomeRelatorio("Pessoa fisica");
+        System.out.println(tipoCliente2);
+
     }
 }
