@@ -5,7 +5,7 @@ package academy.devdojo.maratonajava.Javacore.ClassesAbistratas.Dominio;
  * Nao podem ser instanciadas diretamente, nao pode existir um objeto funcinario.
  * sao criadas para ser superclasses
  */
-public abstract class Funcionario {
+public abstract class Funcionario extends Pessoa{
     protected String nome;
     protected double salario;
 
@@ -17,4 +17,8 @@ public abstract class Funcionario {
 
     public abstract double calculaBonus();
 
+    @Override
+    public void imprime() {
+        System.out.println("Imprimindo");
+    }
 }
