@@ -1,7 +1,5 @@
 package academy.devdojo.maratonajava.Javacore.Minterfaces.dominio;
 
-import java.security.PublicKey;
-
 /**
  * Interfaces sao contratos
  * Para uma classe implementar um contrato de uma interface, deve-se usar a palabra reservada 'Implements'
