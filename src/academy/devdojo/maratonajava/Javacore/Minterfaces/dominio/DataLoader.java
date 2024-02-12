@@ -8,4 +8,8 @@ package academy.devdojo.maratonajava.Javacore.Minterfaces.dominio;
 public interface DataLoader {
     void laod();
 
+    default void checkPermission() {
+        System.out.println("Fazendo checagem de permissoes");
+    } //nao é necessario implementar
+
 }
