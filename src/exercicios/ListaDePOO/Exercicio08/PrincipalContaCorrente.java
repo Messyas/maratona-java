@@ -2,6 +2,7 @@ package exercicios.ListaDePOO.Exercicio08;
 
 import exercicios.ListaDePOO.Exercicio07.ContaCorrente;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
 public class PrincipalContaCorrente {
@@ -11,8 +12,10 @@ public class PrincipalContaCorrente {
         ContaCorrente contaCorrente = new ContaCorrente();
         int valor;
         while (true) {
+            System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
+            System.out.println(",,-------Seja bem vindo-------,,");
+            System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
 
-            System.out.println("--------Seja bem vindo--------");
             System.out.println("\n");
             System.out.println("Digite [1] para cadastrar");
             System.out.println("Digite [2] para Depositar");
@@ -27,7 +30,9 @@ public class PrincipalContaCorrente {
             }
 
             if(valor == 1) {
-                System.out.println("Vamos fazer seu cadastro");
+                System.out.println("-------------------------\n");
+                System.out.println("Vamos fazer seu cadastro\n");
+                System.out.println("-------------------------");
 
                 System.out.println("Digite o nome do cliente");
                 String nomeCliente = scanner.next();
@@ -53,7 +58,12 @@ public class PrincipalContaCorrente {
             } else if (valor == 3) {
                 System.out.println("Digite o valor do saque ");
                 double saque = scanner.nextDouble();
-                contaCorrente.sacar(saque);
+                double returno = contaCorrente.sacar(saque);
+                if (returno == 1) {
+                    System.out.println("Saque efetivado");
+                } else if (returno == 0) {
+                    System.out.println("Saldo insuficiente para o saque, digite um valor Compativel!");
+                }
             } else if (valor == 4) {
                 contaCorrente.imprimir();
             } else {

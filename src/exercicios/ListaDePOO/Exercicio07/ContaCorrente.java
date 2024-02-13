@@ -10,15 +10,22 @@ public class ContaCorrente {
     }
 
     public void imprimir() {
+        System.out.println("............................");
+        System.out.println(".... IMPRIMINDO - DADOS ....");
+        System.out.println("............................\n");
+
+        System.out.println("---------------------------------------");
+        System.out.println("Nome do cliente " + this.nomeCliente);
         System.out.println("Conta" + this.conta);
         System.out.println("Agencia" + this.agencia);
         System.out.println("Saldo" + this.saldo);
-        System.out.println("Nome do cliente " + this.nomeCliente);
+        System.out.println("---------------------------------------");
+
     }
 
     public int sacar(double valor) {
         if (this.saldo < valor) {
-            System.out.println("Valor de saque menor do que o do saldo");
+            System.out.println("Valor de saque maior do que o do saldo\n");
             return 0;
         } else {
             this.saldo -= valor;
