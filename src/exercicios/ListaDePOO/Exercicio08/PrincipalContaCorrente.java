@@ -2,7 +2,6 @@ package exercicios.ListaDePOO.Exercicio08;
 
 import exercicios.ListaDePOO.Exercicio07.ContaCorrente;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
 public class PrincipalContaCorrente {
