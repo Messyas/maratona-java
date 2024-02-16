@@ -1,56 +1,44 @@
 package exercicios.ListaDePOO.Exercicio13;
 
-
 public class ContaCorrente {
+    private String nomeCliente;
     private String conta;
     private String agencia;
-    private double saldo;
-    private String nomeCliente;
+    private Double saldo;
 
-    public ContaCorrente() {
+    public ContaCorrente(String nomeCliente, String conta, String agencia) {
+        this.nomeCliente = nomeCliente;
+        this.conta = conta;
+        this.agencia = agencia;
     }
 
-    public void imprimir() {
-        System.out.println("............................");
-        System.out.println(".... IMPRIMINDO - DADOS ....");
-        System.out.println("............................\n");
-
-        System.out.println("---------------------------------------");
-        System.out.println("Nome do cliente " + this.nomeCliente);
-        System.out.println("Conta" + this.conta);
-        System.out.println("Agencia" + this.agencia);
-        System.out.println("Saldo" + this.saldo);
-        System.out.println("---------------------------------------");
-
-    }
-
-    public int sacar(double valor) {
-        if (this.saldo < valor) {
-            System.out.println("Valor de saque maior do que o do saldo\n");
+    public double sacar(double valor) {
+        if(valor > this.saldo) {
+            System.out.println("Valor de saque maior que o do saldo ");
             return 0;
-        } else {
-            this.saldo -= valor;
         }
+        System.out.println("Saque efetivado");
         return 1;
     }
 
     public void depositar(double valor) {
         this.saldo += valor;
+        System.out.println("Valor depositado ");
     }
 
-    public void setConta(String conta) {
-        this.conta = conta;
+    public void imprimir() {
+        System.out.println("|-------- SEJA BEM VINDO ----------|");
+        System.out.println("| -- Cliente " + this.nomeCliente + " -- |");
+        System.out.println("| Sua agencia é " + this.agencia + " e sua conta é" + this.conta);
+        System.out.println("|--------------------------------------|\n");
+        System.out.println(" O Saldo disponivel nessa conta: " + this.saldo + " |");
     }
 
-    public void setAgencia(String agencia) {
-        this.agencia = agencia;
+    public Double getSaldo() {
+        return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    public void setSaldo(Double saldo) {
         this.saldo = saldo;
-    }
-
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
     }
 }
