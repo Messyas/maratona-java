@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PrincipalContaCorrente {
 
     public ContaCorrente contaCorrente;
+    public Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         PrincipalContaCorrente principalContaCorrente = new PrincipalContaCorrente();
@@ -43,20 +44,7 @@ public class PrincipalContaCorrente {
                 }
 
                 case 4: {
-                    //bug na hora de pedir pra digitar
-                    System.out.println("Digite seus dados para cadastrar\n");
-
-                    System.out.println("Digite o seu nome: ");
-                    String nomeCad = scanner.toString();
-
-                    System.out.println("Digite a agencia");
-                    String agenciaCad = scanner.toString();
-
-                    System.out.println("Digite a agencia");
-                    String contaCad = scanner.toString();
-
-                    principalContaCorrente.cadastrar(nomeCad,agenciaCad,contaCad);
-
+                    principalContaCorrente.cadastrar();
                     break;
                 }
 
@@ -81,9 +69,21 @@ public class PrincipalContaCorrente {
         }
     }
 
-    public void cadastrar(String nome, String agencia, String conta) {
+    public void cadastrar() {
         if(this.contaCorrente == null) {
-            contaCorrente = new ContaCorrente(nome, agencia, conta);
+            System.out.println("Digite seus dados para cadastrar");
+
+            System.out.println("Digite o seu nome: ");
+            String nomeCad = scanner.nextLine();
+
+            System.out.println("Digite a agencia");
+            String agenciaCad = scanner.nextLine();
+
+            System.out.println("Digite a conta");
+            String contaCad = scanner.nextLine();
+
+            contaCorrente = new ContaCorrente(nomeCad,agenciaCad,contaCad);
+
         } else {
             System.out.println("Conta ja cadastrada");
         }

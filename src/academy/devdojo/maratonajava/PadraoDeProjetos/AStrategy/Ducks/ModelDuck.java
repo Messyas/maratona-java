@@ -1,7 +1,6 @@
 package academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks;
 
 import academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks.som.Quack;
-import academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks.som.QuackBehavior;
 import academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks.voo.FlyNoWay;
 
 public class ModelDuck extends Duck{

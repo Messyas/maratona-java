@@ -1,7 +1,5 @@
 package academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks.som;
 
-import academy.devdojo.maratonajava.PadraoDeProjetos.AStrategy.Ducks.som.QuackBehavior;
-
 public class MuteQuack implements QuackBehavior {
 
     @Override

@@ -16,9 +16,11 @@ public class ContaCorrente {
     }
 
     public int sacar(double valor) {
-        if(!(valor >saldo)){
-            System.out.println("valor de saque maior do que o do saldo");
+        if(valor>saldo){
+            System.out.println("Digite um valor de saque inferior ao do saldo");
             return 0;
+        } else {
+            this.saldo -= valor;
         }
         return 1;
     }
