@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.ExerciciosDevDojo;
 
 public class ExerciciosSwitch {
     public static void main(String[] args) {

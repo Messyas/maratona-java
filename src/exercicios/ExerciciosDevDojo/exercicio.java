@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.ExerciciosDevDojo;
 
 import java.util.Scanner;
 
