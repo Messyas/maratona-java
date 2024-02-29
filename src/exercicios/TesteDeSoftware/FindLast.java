@@ -21,5 +21,11 @@ class FindLast {
     }
     // test:  x=[2, 3, 5]; y = 2
     //        Expected = 0
+    public static void main() {
+        int[] x = {2,3,5};
+        int y = 2;
+        int retorno = findLast(x, y);
+        System.out.println(retorno);
+    }
 
 }
