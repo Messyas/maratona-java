@@ -41,12 +41,14 @@ public class ContaCorrente {
     }
 
     public boolean saque(float valor) throws SaldoInsuficienteException {
-        if (saldo < valor) {
+        if(valor <= 0){
+            throw new SaldoInsuficienteException("Valor informado deve ser real");
+        } else if (saldo < valor) {
             throw new SaldoInsuficienteException("Saldo Insuficiente.");
         } else {
             saldo -= valor;
+            return true;
         }
-        return true;
     }
 
     public void transferencia(ContaCorrente c, float valor)
