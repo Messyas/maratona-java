@@ -1,6 +1,7 @@
 package exercicios.TesteDeSoftware;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,6 +19,7 @@ public class FindLastTest {
     }
 
     @Test
+    @DisplayName("teste de index")
     void testFindLast() {
         int expectedIndex = 0;
         int actualIndex = FindLast.findLast(array,valueToFind);
