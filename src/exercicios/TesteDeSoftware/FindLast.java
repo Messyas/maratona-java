@@ -7,7 +7,7 @@ class FindLast {
         //   If no such element exists, return -1
 
         // As the example in the book points out, this loop should end at 0.
-        for (int i = x.length - 1; i >= 0; i--) {//erro que inpedia que iterasse sobre o primeiro indice corretamente
+        for (int i = x.length - 1; i >= 0; i--) {//erro que desconsiderava o indice inicial
             if (x[i] == y) {
                 return i;
             }

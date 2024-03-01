@@ -51,14 +51,19 @@ public class ContaCorrente {
         }
     }
 
-    public void transferencia(ContaCorrente c, float valor)
-            throws OperacaoIlegalException
-    {
-        try{
-            saque(valor);
-            c.deposita(valor);
-        } catch (SaldoInsuficienteException e){
-            throw new OperacaoIlegalException("Operação Ilegal!");
+    public void transferencia(ContaCorrente c, float valor) throws OperacaoIlegalException {
+        if (valor <= 0) {
+            throw new OperacaoIlegalException("Operacao ilegal: O valor deve da transferencia precisa ser maior que 0");
+        } else if (this == c) {
+            throw new OperacaoIlegalException("Operacao ilegal: Não é possível transferir para a mesma conta.");
+        } else {
+            try{
+                saque(valor);
+                c.deposita(valor);
+            } catch (SaldoInsuficienteException e){
+                throw new OperacaoIlegalException("Operação Ilegal: Saldo Insuficiente.");
+            }
         }
+
     }
 }
