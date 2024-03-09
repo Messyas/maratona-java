@@ -1,4 +1,4 @@
-package exercicios.TesteDeSoftware.contacorrente;
+package exercicios.TesteDeSoftware.contacorrente.model;
 
 public class OperacaoIlegalException extends IllegalStateException {
 

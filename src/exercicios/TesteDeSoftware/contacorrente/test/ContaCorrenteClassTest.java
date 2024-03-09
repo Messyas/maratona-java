@@ -5,11 +5,13 @@ import exercicios.TesteDeSoftware.contacorrente.model.OperacaoIlegalException;
 import exercicios.TesteDeSoftware.contacorrente.model.SaldoInsuficienteException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ContaCorrenteTest {
+public class ContaCorrenteClassTest {
     private ContaCorrente contaCorrente;
     private ContaCorrente contaOrigem;
     private ContaCorrente contaDestino;
@@ -24,6 +26,7 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste do metodo Depositar")
     @Test
+    @Tag("TesteA")
     public void testDeposita() {
         assertTrue(contaCorrente.deposita(500.0f));
         assertEquals(2500.0f, contaCorrente.getSaldo(), 0.001);
@@ -34,6 +37,7 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste do metodo saque")
     @Test
+    @Tag("TesteA")
     public void testSaque() {
         try {
             assertTrue(contaCorrente.saque(500.0f));
@@ -48,12 +52,14 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste de lancamento de exececao para saldo insuficiente")
     @Test
+    @Tag("TesteA")
     public void testSaqueInsuficienteException() {
         assertThrows(SaldoInsuficienteException.class, () -> contaCorrente.saque(3000.0f));
     }
 
     @DisplayName("Teste de transferencia bancaria bem sucedida")
     @Test
+    @Tag("TesteB")
     public void testTransferenciaSucesso() {
         try {
             contaOrigem.transferencia(contaDestino, 500.0f);
@@ -66,6 +72,7 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste de transferencia em que o saldo é insuficiente")
     @Test
+    @Tag("TesteB")
     public void testTransferenciaSaldoInsuficiente() {
         // Tenta transferir mais do que o saldo da conta de origem
         assertThrows(OperacaoIlegalException.class, () -> contaOrigem.transferencia(contaDestino, 3000.0f));
@@ -76,6 +83,7 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste de transferencia em que o saldo é igual ao saque")
     @Test
+    @Tag("TesteB")
     public void testTransferenciaSaldoExato() {
         try {
             contaOrigem.transferencia(contaDestino, 2000.0f);
@@ -88,6 +96,7 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste de transferencia com valor negativo")
     @Test
+    @Tag("TesteB")
     public void testTransferirValorNegativo() {
         // Tenta transferir um valor negativo
         assertThrows(OperacaoIlegalException.class, () -> contaOrigem.transferencia(contaDestino, (float) -500.0));
@@ -98,8 +107,11 @@ public class ContaCorrenteTest {
 
     @DisplayName("Teste de transferencia para a mesma conta")
     @Test
+    @Tag("TesteB")
     public void testTransferenciaParaMesmaConta() {
         assertThrows(OperacaoIlegalException.class, () -> contaOrigem.transferencia(contaOrigem, 100.0f));//falhou no primeiro teste
         assertEquals(2000.0f, contaOrigem.getSaldo(), 0.001);
-    }
+
+
+   }
 }
