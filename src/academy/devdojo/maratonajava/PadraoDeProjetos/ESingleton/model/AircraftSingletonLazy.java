@@ -20,12 +20,11 @@ public final class AircraftSingletonLazy {
 
     public static AircraftSingletonLazy getINSTANCE() {
         //double lock
-        if(INSTANCE == null) {
+        if (INSTANCE == null) {
             synchronized (AircraftSingletonLazy.class) {
                 if(INSTANCE == null) {
                     INSTANCE = new AircraftSingletonLazy("787-900");
                 }
-
             }
         }
         return INSTANCE;
